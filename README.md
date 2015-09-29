@@ -162,7 +162,8 @@ String.h: String operations.
 <b>Lexical Analyzer:</b>
 LexAnalyzer.h: Reads the input file and returns a list of lexems
 LexDefs.h: Contains a list of regular definition that are used for determining lexems
-RegDefs.h: Contains a list of regular expressions. Not all the regular expressions are lexems. The file also expands the regular expressions where another regular expression is used in side it
+RegDefs.h: Contains a list of regular expressions. Not all the regular expressions are lexems.
+The file also expands the regular expressions where another regular expression is used in side it
 LexTree.h: Receives as input a regular expression and generates the associated parse tree
 NFA.h: Receives as input a parse tree and generates the associated nondeterministic finite autamata (NFA).
 
