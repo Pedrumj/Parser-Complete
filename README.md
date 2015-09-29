@@ -151,30 +151,30 @@ The output parse tree would be:
 
 #Source Files:
 <pre>
-<b>General:</b>
-Class_Generic.h: Generic functions for defining structs. 
-Create_Object.h: Generic function for initializing structs.
-LinkedList.h: Generic linked list data structure.
-ParseTree.h: Generic parse tree data structure.
-Stack.h: Generic stack data structure.
-String.h: String operations.
+<b>GENERAL:</b>
+<b>Class_Generic.h:</b> Generic functions for defining structs. 
+<b>Create_Object.h:</b> Generic function for initializing structs.
+<b>LinkedList.h:</b> Generic linked list data structure.
+<b>ParseTree.h:</b> Generic parse tree data structure.
+<b>Stack.h:</b> Generic stack data structure.
+<b>String.h:</b> String operations.
 
-<b>Lexical Analyzer:</b>
-LexAnalyzer.h: Reads the input file and returns a list of lexems
-LexDefs.h: Contains a list of regular definition that are used for determining lexems
-RegDefs.h: Contains a list of regular expressions. Not all the regular expressions are lexems.
+<b>LEXICAN ANALYZER:</b>
+<b>LexAnalyzer.h:</b> Reads the input file and returns a list of lexems
+<b>LexDefs.h:</b> Contains a list of regular definition that are used for determining lexems
+<b>RegDefs.h:</b> Contains a list of regular expressions. Not all the regular expressions are lexems.
 The file also expands the regular expressions where another regular expression is used in side it
-LexTree.h: Receives as input a regular expression and generates the associated parse tree
-NFA.h: Receives as input a parse tree and generates the associated nondeterministic finite autamata (NFA).
+<b>LexTree.h:</b> Receives as input a regular expression and generates the associated parse tree
+<b>NFA.h:</b> Receives as input a parse tree and generates the associated nondeterministic finite autamata (NFA).
 
-<b>Parser:</b>
-Automation.h: Generates the grammar automaton
-Closure.h: Generates the closure based on the input production and dot position.
-First.h: Generates the FIRST set for each production
-Follow.h: Generates the FOLLOW set for each nonterminal
-Grammar.h: Processes the grammar matrix
-ParseTable.h: Generates the parse table.
-SLRParser.h: Generates a parse tree based on the input grammar and input list of tokens
+<b>PARSER:</b>
+<b>Automation.h:</b> Generates the grammar automaton
+<b>Closure.h:</b> Generates the closure based on the input production and dot position.
+<b>First.h:</b> Generates the FIRST set for each production
+<b>Follow.h:</b> Generates the FOLLOW set for each nonterminal
+<b>Grammar.h:</b> Processes the grammar matrix
+<b>ParseTable.h:</b> Generates the parse table.
+<b>SLRParser.h:</b> Generates a parse tree based on the input grammar and input list of tokens
 </pre>
 # License
 [The MIT License (MIT)](http://opensource.org/licenses/MIT)
