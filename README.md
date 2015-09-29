@@ -22,7 +22,7 @@ GE                                >=
 WHILE                             while
 </pre>
 
-They can  be found in the RegDefs.c file. The lexical analyzer then converts these regular expressions into parse trees. The parse trees are then converted to NFAs (Nondeterministic Finite Automata).
+They can  be found in the <b>RegDefs.c</b> file. The lexical analyzer then converts these regular expressions into parse trees. The parse trees are then converted to NFAs (Nondeterministic Finite Automata).
 
 #Parser
 The parser is an SLR parser. The following grammar is defined for the parser:
@@ -84,7 +84,7 @@ and the following are the terminals along with their associated token ID:
 11~14 are reserved for future nonterminals. 
 
 #Usage
-Inside the Input folder there is a file with the name Input.txt. The user can input source code that matches the grammar inside this file. After running the program the parse tree will be generated. The Main() function can be found inside Compiler_C.c.
+Inside the Input folder there is a file with the name Input.txt. The user can input source code that matches the grammar inside this file. After running the program the parse tree will be generated. The Main() function can be found inside <b>Compiler_C.c</b>.
 
 Examples of syntax the program will understand are:
 <pre>
@@ -99,6 +99,54 @@ temp = 34*34;
 if(3>=34){
    a = 3;
 }else{ f = 3;}
+</pre>
+
+#Example
+Considering the input below:
+<pre>
+if(1=1){
+   j=34-23;
+}
+</pre>
+
+The output parse tree would be:
+<pre>
+0
+\1
+\\2
+\\\16
+\\\32
+\\\5
+\\\\7
+\\\\\10
+\\\\\\8
+\\\\\\\9
+\\\\\\\\20
+\\\\23
+\\\\7
+\\\\\10
+\\\\\\8
+\\\\\\\9
+\\\\\\\\20
+\\\33
+\\\34
+\\\1
+\\\\4
+\\\\\6
+\\\\\\19
+\\\\\\23
+\\\\\7
+\\\\\\10
+\\\\\\\10
+\\\\\\\\8
+\\\\\\\\\9
+\\\\\\\\\\20
+\\\\\\\29
+\\\\\\\8
+\\\\\\\\9
+\\\\\\\\\20
+\\\\36
+\\\35
 </pre>
 
 # License
