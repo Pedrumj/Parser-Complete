@@ -149,5 +149,31 @@ The output parse tree would be:
 \\\35
 </pre>
 
+#Source Files:
+<pre>
+<b>General:</b>
+Class_Generic.h: Generic functions for defining structs. 
+Create_Object.h: Generic function for initializing structs.
+LinkedList.h: Generic linked list data structure.
+ParseTree.h: Generic parse tree data structure.
+Stack.h: Generic stack data structure.
+String.h: String operations.
+
+<b>Lexical Analyzer:</b>
+LexAnalyzer.h: Reads the input file and returns a list of lexems
+LexDefs.h: Contains a list of regular definition that are used for determining lexems
+RegDefs.h: Contains a list of regular expressions. Not all the regular expressions are lexems. The file also expands the regular expressions where another regular expression is used in side it
+LexTree.h: Receives as input a regular expression and generates the associated parse tree
+NFA.h: Receives as input a parse tree and generates the associated nondeterministic finite autamata (NFA).
+
+<b>Parser:</b>
+Automation.h: Generates the grammar automaton
+Closure.h: Generates the closure based on the input production and dot position.
+First.h: Generates the FIRST set for each production
+Follow.h: Generates the FOLLOW set for each nonterminal
+Grammar.h: Processes the grammar matrix
+ParseTable.h: Generates the parse table.
+SLRParser.h: Generates a parse tree based on the input grammar and input list of tokens
+</pre>
 # License
 [The MIT License (MIT)](http://opensource.org/licenses/MIT)
