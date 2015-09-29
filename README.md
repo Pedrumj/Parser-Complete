@@ -3,6 +3,7 @@ This project is a complete Parser + Lexical Analyzer. The program receives as in
 
 # Lexical Analyzer
 The following Regular expressions are defined for the lexical analyzer:
+<pre>
 delim                             [ \t\n]
 ws                                {delim}+
 letter                            [A-Za-z]
@@ -19,6 +20,7 @@ NE                                <>
 GT                                >
 GE                                >=
 WHILE                             while
+</pre>
 
 They can  be found in the RegDefs.c file. The lexical analyzer then converts these regular expressions into parse trees. The parse trees are then converted to NFAs (Nondeterministic Finite Automata).
 
@@ -81,9 +83,23 @@ and the following are the terminals along with their associated token ID:
 
 11~14 are reserved for future nonterminals. 
 
+#Usage
+Inside the Input folder there is a file with the name Input.txt. The user can input source code that matches the grammar inside this file. After running the program the parse tree will be generated. The Main() function can be found inside Compiler_C.c.
 
+Examples of syntax the program will understand are:
+<pre>
+while(1=1){
+   f=3;
+}
+if(1=1){
+   j=34-23;
+}
 
-<link>http://jtech-online.com/?page_id=492</link>
+temp = 34*34;
+if(3>=34){
+   a = 3;
+}else{ f = 3;}
+</pre>
+
 # License
-
 [The MIT License (MIT)](http://opensource.org/licenses/MIT)
